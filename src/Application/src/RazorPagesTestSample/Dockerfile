@@ -18,6 +18,7 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 # Expose the desired port
 EXPOSE 8080
+EXPOSE 80
 
 # Set the working directory
 WORKDIR /app
