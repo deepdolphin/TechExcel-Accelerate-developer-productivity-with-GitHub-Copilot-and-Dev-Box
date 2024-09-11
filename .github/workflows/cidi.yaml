@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: dockerBuildPush
     environment:
-      name: dev
+      name: 'dev'
       url: '${{ secrets.WEBSITE_FQDN }}'
     steps:
       - name: 'Login via Azure CLI'
