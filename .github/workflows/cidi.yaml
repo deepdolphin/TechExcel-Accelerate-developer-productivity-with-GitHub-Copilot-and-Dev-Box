@@ -68,7 +68,7 @@ jobs:
     needs: dockerBuildPush
     environment:
       name: 'dev'
-      url: '${{ secrets.WEBSITE_FQDN }}'
+      url: https://g3b2npsjbcxms-dev.azurewebsites.net/
     steps:
       - name: 'Login via Azure CLI'
         uses: azure/login@v2.1.1
