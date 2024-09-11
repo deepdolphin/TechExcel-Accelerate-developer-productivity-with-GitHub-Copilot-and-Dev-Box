@@ -95,6 +95,10 @@ resource appServiceApp 'Microsoft.Web/sites@2020-12-01' = {
           name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
           value: appInsights.properties.InstrumentationKey
         }
+        {
+          name: 'ASPNETCORE_HTTP_PORTS'
+          value: '80'
+        }
         ]
       }
     }
