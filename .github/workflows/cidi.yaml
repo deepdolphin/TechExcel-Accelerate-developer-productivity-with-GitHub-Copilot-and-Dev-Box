@@ -1,7 +1,7 @@
 name: .NET CI
 
 env:
-  registryName: ${{ secrets.ACRREGISTRY_NAME }}
+  registryName: ${{secrets.ACRREGISTRY_NAME}}
   repositoryName: techexcel/dotnetcoreapp
   dockerFolderPath: ./src/Application/src/RazorPagesTestSample
   tag: ${{github.run_number}}
@@ -69,8 +69,7 @@ jobs:
     needs: dockerBuildPush
     environment:
       name: dev
-      url: ${{ secrets.WEBSITE_FQDN }}
-    
+      url: '${{ secrets.WEBSITE_FQDN }}'
     steps:
       - name: 'Login via Azure CLI'
         uses: azure/login@v2.1.1
