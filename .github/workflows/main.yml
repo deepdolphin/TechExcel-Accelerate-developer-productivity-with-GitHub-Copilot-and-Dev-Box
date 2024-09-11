@@ -52,6 +52,5 @@
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{ secrets.AZURE_RG }}
-          template: ./InfrastructureAsCode/main.bicep
-          # Use the environment variable called targetEnv
-          parameters: environment=dev
+          template: ./src/InfrastructureAsCode/main.bicep
+          
